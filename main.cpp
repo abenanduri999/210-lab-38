@@ -64,6 +64,20 @@ int main() {
                 case 4: 
                     cout<<"Enter code to modify:\n"; 
                     getline(cin, code); 
+                    cin.ignore(); 
+                    bool result = tree.searchNode(code); 
+                    if(result = true)
+                        {
+                            string code2; 
+                            cout<<"Enter modification"<<endl; 
+                            getline(cin, code2); 
+                            tree.remove(code); 
+                            tree.insertNode(code2);
+                        }
+                    else
+                        {
+                            cout<<"Code to modify not found"<<endl; 
+                        }
                     break; 
 
                 case 5: 
