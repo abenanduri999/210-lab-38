@@ -1,13 +1,20 @@
 #include <iostream>
-#include<string>
-#include<fstream>
+#include <string>
+#include <fstream>
 #include "IntBinaryTree.h"
 using namespace std;
 
 int main() {
-    
+     
+    /*IntBinaryTree bst; 
 
-    IntBinaryTree bst; 
+    ifstream input ("codes.txt");
+    int coun = 0; 
+    string c; 
+    while(getline(input, c))
+    {
+        bst.insertNode(c); 
+    }*/
 
     int choice; 
     string code; 
@@ -20,6 +27,7 @@ int main() {
         cout<<"4) Modify a Record\n"; 
         cout<<"5) Exit\n"; 
         cin>>choice; 
+        cin.ignore(); 
 
         switch(choice)
             {
@@ -29,11 +37,29 @@ int main() {
                     break; 
                 
                 case 2: 
+                    cout<<"Enter code to delete: \n"; 
+                    getline(cin, code); 
+                    break; 
+
+                case 3: 
+                    cout<<"Enter code to Search: \n"; 
+                    getline(cin, code); 
+                    break; 
+
+                case 4: 
+                    cout<<"Enter code to modify:\n"; 
+                    getline(cin, code); 
+                    break; 
+
+                case 5: 
+                    cout<<"Goodbye.\n"; 
+                    break; 
             }
 
 
 
-    }while(choice != 5)
+    }while(choice != 5);
+
 
     return 0;
 }

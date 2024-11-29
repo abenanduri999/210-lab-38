@@ -4,7 +4,7 @@
 #include<string>
 using namespace std; 
 
-// The IntBinaryTree class manages a binary tree of integers.
+// The IntBinaryTree class manages a binary tree of integers. -> changed it to strings
 class IntBinaryTree {
 private:
    // TreeNode is a private structure for IntBinaryTree nodes.
