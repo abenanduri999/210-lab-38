@@ -6,15 +6,18 @@ using namespace std;
 
 int main() {
      
-    /*IntBinaryTree bst; 
+    IntBinaryTree bst; 
 
     ifstream input ("codes.txt");
-    int coun = 0; 
+    int count = 0; 
     string c; 
     while(getline(input, c))
     {
         bst.insertNode(c); 
-    }*/
+        count++; 
+    }
+    input.close(); 
+    
 
     int choice; 
     string code; 
@@ -34,16 +37,19 @@ int main() {
                 case 1: 
                     cout<<"Enter a new code: \n"; 
                     getline(cin, code); 
+                    bst.insertNode(code); 
                     break; 
                 
                 case 2: 
                     cout<<"Enter code to delete: \n"; 
                     getline(cin, code); 
+                    bst.remove(code); 
                     break; 
 
                 case 3: 
                     cout<<"Enter code to Search: \n"; 
                     getline(cin, code); 
+                    
                     break; 
 
                 case 4: 
