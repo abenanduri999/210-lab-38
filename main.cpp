@@ -6,7 +6,8 @@ using namespace std;
 
 int main() {
      
-    IntBinaryTree tree; 
+    IntBinaryTree tree;
+    
 
     ifstream input ("codes.txt");
     int count = 0; 
@@ -35,18 +36,23 @@ int main() {
         switch(choice)
             {
                 case 1: 
+                {
                     cout<<"Enter a new code: \n"; 
                     getline(cin, code); 
                     tree.insertNode(code); 
                     break; 
+                }
                 
-                case 2: 
+                case 2:
+                { 
                     cout<<"Enter code to delete: \n"; 
                     getline(cin, code); 
                     tree.remove(code); 
                     break; 
+                }
 
                 case 3: 
+                {
                     cout<<"Enter code to Search: \n"; 
                     getline(cin, code); 
                     bool result = tree.searchNode(code);
@@ -60,13 +66,15 @@ int main() {
                         }    
                         
                     break; 
+                }
 
                 case 4: 
+                {
                     cout<<"Enter code to modify:\n"; 
                     getline(cin, code); 
                     cin.ignore(); 
-                    bool result = tree.searchNode(code); 
-                    if(result = true)
+                    bool hasValue = tree.searchNode(code); 
+                    if(hasValue = true)
                         {
                             string code2; 
                             cout<<"Enter modification"<<endl; 
@@ -79,10 +87,13 @@ int main() {
                             cout<<"Code to modify not found"<<endl; 
                         }
                     break; 
+                }
 
-                case 5: 
+                case 5:               
+                {
                     cout<<"Goodbye.\n"; 
-                    break; 
+                    break;
+                } 
             }
 
 
