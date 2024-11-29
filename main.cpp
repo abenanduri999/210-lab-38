@@ -6,14 +6,14 @@ using namespace std;
 
 int main() {
      
-    IntBinaryTree bst; 
+    IntBinaryTree tree; 
 
     ifstream input ("codes.txt");
     int count = 0; 
     string c; 
     while(getline(input, c))
     {
-        bst.insertNode(c); 
+        tree.insertNode(c); 
         count++; 
     }
     input.close(); 
@@ -37,19 +37,28 @@ int main() {
                 case 1: 
                     cout<<"Enter a new code: \n"; 
                     getline(cin, code); 
-                    bst.insertNode(code); 
+                    tree.insertNode(code); 
                     break; 
                 
                 case 2: 
                     cout<<"Enter code to delete: \n"; 
                     getline(cin, code); 
-                    bst.remove(code); 
+                    tree.remove(code); 
                     break; 
 
                 case 3: 
                     cout<<"Enter code to Search: \n"; 
                     getline(cin, code); 
-                    
+                    bool result = tree.searchNode(code);
+                    if(result = true)
+                        { 
+                            cout<<"The code was found"<<endl; 
+                        }
+                    else
+                        {
+                            cout<<"Code was not found"<<endl; 
+                        }    
+                        
                     break; 
 
                 case 4: 
