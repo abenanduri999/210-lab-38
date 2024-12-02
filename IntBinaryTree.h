@@ -44,4 +44,4 @@ public:
    void displayPostOrder() const   {  displayPostOrder(root); }
 };
 
-#endif // INTBINARYTREE_H
+#endif 

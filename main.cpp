@@ -7,7 +7,6 @@ using namespace std;
 int main() {
      
     IntBinaryTree tree;
-    
 
     ifstream input ("codes.txt");
     int count = 0; 
@@ -85,7 +84,7 @@ int main() {
                     else
                         {
                             cout<<"Code to modify not found"<<endl; 
-                        }
+                        } 
                     break; 
                 }
 
