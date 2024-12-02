@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
      
-    IntBinaryTree tree;
+    IntBinaryTree tree; 
 
     ifstream input ("codes.txt");
     int count = 0; 
